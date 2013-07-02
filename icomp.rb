@@ -6,7 +6,7 @@ require 'mysql'
 limit=25
 
 begin
-  con=Mysql.new 'localhost', 'db user', 'passwd'
+  con=Mysql.new 'localhost', 'local_database_user', 'passwd'
   puts con.get_server_info
   con.select_db('irec')
   con.query("set character_set_server = utf8;")
